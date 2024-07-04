@@ -17,5 +17,8 @@ jobs:
                 echo "::notice::This is a notice message."
                 echo "::warning::This is a warning message."
                 echo "::error::This is an error message."
+            - run: |
+                echo "::notice file=.github/workflows/DevelopInBranch.yml,line=16,col=17,endColumn=57::There is a debug message that is not always visible!"
+                echo "::warning file=.github/workflows/DevelopInBranch.yml,line=17,endline=19::A lot of messages"
             - uses: actions/checkout@v4.1.0
             - uses: devops-actions/actionlint@v0.1.2
